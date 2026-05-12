@@ -3,166 +3,289 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./animate.css">
     <link rel="stylesheet" href="./owl-carousl/owl.carousel.min.css">
     <link rel="stylesheet" href="./owl-carousl/owl.theme.default.min.css">
     <link rel="stylesheet" href="./custome-style.css">
-    <title>Darlene Cox</title>
+    <title>Darlene Cox — Creative Designer</title>
 </head>
 
 <body>
-    <!-------------------------landing page-------------------------------->
-    <section class="container-fluid ">
-        <div class="row no-gutters">
 
-            <div class="col-md-6">
-                <img src="images/logo.png" alt="" style="width:80px; margin-left: -16px;">
-                <ul class="custom-menu">
-                    <li><a href="#" class="active">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Bolg</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <div class="primary-text-box wow bounceIn">
-                    <h4 class="all-in-one-heading">About <span class="orange-bar">___</span></h4>
-                    <h1>Darlene Cox</h1>
-                    <p class="grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum tempora, harum eius dignissimos? Voluptas vitae, inventore rerum beatae quae culpa non corrupti ad molestiae minima optio aspernatur, facere, ipsum quia.</p>
-                    <a class="custom-btn" href="">Work Enquiry</a>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#about" class="nav-logo">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link active">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-cta-mobile"><a href="#contact" class="btn-primary">Hire Me</a></li>
+            </ul>
+            <a href="#contact" class="btn-hire">Hire Me</a>
+            <button class="nav-hamburger" id="navToggle" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="about" class="hero">
+        <!-- Glassmorphism background blobs -->
+        <div class="hero-blob blob-1"></div>
+        <div class="hero-blob blob-2"></div>
+        <div class="hero-blob blob-3"></div>
+
+        <div class="hero-container">
+            <div class="hero-left">
+                <span class="section-label hero-anim" style="animation-delay:0.1s">About <span class="label-line">___</span></span>
+                <h1 class="hero-name hero-anim" style="animation-delay:0.25s">
+                    Darlene<br>
+                    <span class="name-outline">Cox</span>
+                </h1>
+                <p class="hero-bio hero-anim" style="animation-delay:0.4s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum tempora, harum eius dignissimos? Voluptas vitae, inventore rerum beatae quae culpa non corrupti ad molestiae minima.</p>
+                <div class="hero-actions hero-anim" style="animation-delay:0.55s">
+                    <a href="#contact" class="btn-primary">Work Enquiry</a>
+                    <a href="#portfolio" class="btn-ghost">See My Work</a>
                 </div>
-            </div>
-            <div class="col-md-5">
-                <div class="content-box">
-                    <div id="about-slide" class="owl-carousel owl-nav">
-                        <div class="item"><img src="./images/langin-page-img1.jpg" alt=""></div>
-                        <div class="item"><img src="./images/langin-page-img2.jpg" alt=""></div>
-                        <div class="item"><img src="./images/langin-page-img3.jpg" alt=""></div>
+                <div class="hero-stats hero-anim" style="animation-delay:0.7s">
+                    <div class="stat-item">
+                        <strong class="counter" data-target="8" data-suffix="+">8+</strong>
+                        <span>Years Experience</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong class="counter" data-target="240" data-suffix="+">240+</strong>
+                        <span>Projects Done</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong class="counter" data-target="95" data-suffix="%">95%</strong>
+                        <span>Happy Clients</span>
                     </div>
                 </div>
             </div>
-            <div class="col-md-1">
-                <ul class="sub-menu">
-                    <li><a href="#"> linkedin</a></li>
-                    <li><a href="#"> facebook</a></li>
-                    <li><a href="#"> instagram</a></li>
-                    <li><a href="#" class="active"> twitter</a></li>
+            <div class="hero-right hero-anim-right" style="animation-delay:0.3s">
+                <div class="hero-image-wrap">
+                    <div id="about-slide" class="owl-carousel">
+                        <div class="item"><img src="./images/langin-page-img1.jpg" alt="Darlene Cox"></div>
+                        <div class="item"><img src="./images/langin-page-img2.jpg" alt="Darlene Cox"></div>
+                        <div class="item"><img src="./images/langin-page-img3.jpg" alt="Darlene Cox"></div>
+                    </div>
+                    <!-- Glassmorphism slide info panel -->
+                    <div class="slide-glass-panel">
+                        <div class="slide-counter-wrap">
+                            <span class="slide-num">01</span>
+                            <span class="slide-sep"> / </span>
+                            <span class="slide-total">03</span>
+                        </div>
+                        <div class="slide-progress-bar">
+                            <div class="slide-progress-fill"></div>
+                        </div>
+                        <span class="slide-label">Portfolio</span>
+                    </div>
+                    <div class="img-accent-dot"></div>
+                    <div class="img-accent-ring"></div>
+                </div>
+                <div class="social-sidebar">
+                    <div class="social-line"></div>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon active"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-container">
+            <div class="section-top">
+                <div>
+                    <span class="section-label">Portfolio <span class="label-line">___</span></span>
+                    <h2 class="section-title">Featured Work</h2>
+                </div>
+                <ul class="filter-tabs">
+                    <li class="tab active">Featured</li>
+                    <li class="tab">UI Design</li>
+                    <li class="tab">Web Design</li>
+                    <li class="tab">Branding</li>
+                    <li class="tab">Graphic</li>
                 </ul>
             </div>
+            <div class="portfolio-grid">
+                <div class="pf-item pf-tall" data-animate data-delay="0">
+                    <img src="images/f1.jpg" alt="Portfolio 1">
+                    <div class="pf-overlay">
+                        <span class="pf-cat">UI Design</span>
+                        <h3>Project One</h3>
+                        <a href="#" class="pf-link">View <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="pf-item" data-animate data-delay="0.1">
+                    <img src="images/f2.jpg" alt="Portfolio 2">
+                    <div class="pf-overlay">
+                        <span class="pf-cat">Web Design</span>
+                        <h3>Project Two</h3>
+                        <a href="#" class="pf-link">View <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="pf-item" data-animate data-delay="0.2">
+                    <img src="images/f3.jpg" alt="Portfolio 3">
+                    <div class="pf-overlay">
+                        <span class="pf-cat">Branding</span>
+                        <h3>Project Three</h3>
+                        <a href="#" class="pf-link">View <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="pf-item" data-animate data-delay="0.1">
+                    <img src="images/f4.jpg" alt="Portfolio 4">
+                    <div class="pf-overlay">
+                        <span class="pf-cat">Graphic Design</span>
+                        <h3>Project Four</h3>
+                        <a href="#" class="pf-link">View <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="pf-item" data-animate data-delay="0.2">
+                    <img src="images/f5.jpg" alt="Portfolio 5">
+                    <div class="pf-overlay">
+                        <span class="pf-cat">UI Design</span>
+                        <h3>Project Five</h3>
+                        <a href="#" class="pf-link">View <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </section>
-    <!-------------------------portfolio-------------------------------->
-    <section class="container">
-       <div class="row">
-        <div class="col-12">
-            <h4 class="all-in-one-heading wow bounceIn">portfolio <span class="orange-bar"> ____</span></h4>
-            <h1 class="wow bounceIn">Features</h1>
-            <ul class="custom-menu-two">
-                <li><a href="#" style="color: black">Featured</a></li>
-                <li><a href="#">User Interface</a></li>
-                <li><a href="#">Web Design</a></li>
-                <li><a href="#">Branding</a></li>
-                <li><a href="#">Graphic Design</a></li>
-            </ul>
+    <!-- ===== BLOG ===== -->
+    <section id="blog" class="blog-section">
+        <div class="section-container">
+            <div class="section-top centered">
+                <span class="section-label">Blog <span class="label-line">___</span></span>
+                <h2 class="section-title">Recent Articles</h2>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card" data-animate data-delay="0">
+                    <div class="blog-img">
+                        <img src="images/id1.jpg" alt="Article 1">
+                        <span class="blog-badge">Design</span>
+                    </div>
+                    <div class="blog-body">
+                        <time class="blog-date">12 February 2020</time>
+                        <h3>7 Principles of Effective Icon Design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, laudantium debitis maiores aut at quam, aliquid ad blanditiis officia.</p>
+                        <a href="#" class="read-more">Read Article <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card" data-animate data-delay="0.15">
+                    <div class="blog-img">
+                        <img src="images/id2.jpg" alt="Article 2">
+                        <span class="blog-badge">UX</span>
+                    </div>
+                    <div class="blog-body">
+                        <time class="blog-date">12 February 2020</time>
+                        <h3>7 Principles of Effective Icon Design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, laudantium debitis maiores aut at quam, aliquid ad blanditiis officia.</p>
+                        <a href="#" class="read-more">Read Article <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#" class="btn-primary">View All Articles</a>
+            </div>
         </div>
-   
-    <!-------------------------work gallery-------------------------------->
-    
-        
-            <div class="col-md-4">
-                <img src="images/f1.jpg" alt="" class="wow fadeInUp" style="width: 100%; height: 700px;">
-            </div>
-            <div class="col-md-4">
-                <img src="images/f2.jpg" alt="" class="wow fadeInUp" style="width: 100%; height: 350px; padding-bottom:10px">
-                <img src="images/f4.jpg" alt="" class="wow fadeInUp" style="width: 100%; height: 350px; padding-top:10px;">
-            </div>
-            <div class="col-md-4">
-                <img src="images/f3.jpg" alt="" class="wow fadeInUp" style="width: 100%; height: 350px; padding-bottom:10px">
-                <img src="images/f5.jpg" alt="" class="wow fadeInUp" style="width: 100%; height: 350px; padding-top:10px;">
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info-col">
+                    <span class="section-label light">Contact <span class="label-line">___</span></span>
+                    <h2 class="section-title light">Work Enquiry</h2>
+                    <p class="contact-tagline">Wanna talk about your<br>next project?</p>
+                    <div class="contact-details">
+                        <div class="detail-row">
+                            <div class="detail-icon"><i class="fas fa-envelope"></i></div>
+                            <span>hello@darlenecox.com</span>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-icon"><i class="fas fa-phone-alt"></i></div>
+                            <span>+1 (234) 567 890</span>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <span>New York, USA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-col">
+                    <form class="contact-form">
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Your full name">
+                            </div>
+                            <div class="input-group">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>Project Type</label>
+                            <select>
+                                <option value="">Select project type</option>
+                                <option>UI/UX Design</option>
+                                <option>Web Design</option>
+                                <option>Branding</option>
+                                <option>Graphic Design</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Message</label>
+                            <textarea placeholder="Tell me about your project..." rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
-<!-------------------------Articles-------------------------------->
-   <section class="container">
-       <div class="row">
-           <div class="col-md-6" style="margin-top:50px" >
-               <h4 class="all-in-one-heading wow bounceIn">Blog <span class="orange-bar"> ____</span></h4>
-            <h1 class="wow bounceIn">Recent Articles</h1>
-            <p class="wow bounceIn" style="color:#9a9a9a; padding-top: 50px;">12.02.2020</p>
-            <h1 class="wow bounceIn">7 Principles of Effective<br/>Icon Design</h1>
-            <p class="wow bounceIn" style="color:#9a9a9a; padding-top: 50px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, laudantium debitis maiores aut at quam, aliquid ad blanditiis officia minus quidem nam explicabo, nobis vitae itaque repellat! Eum, laborum, dolores!</p>
-            <a href="#" class="orange-bar wow bounceIn">Read more</a>
-           </div>
-           <div class="col-md-6">
-               <img src="images/id1.jpg" alt="" style="margin-top: 60px; width: 100%;" class="wow fadeInUp">
-           </div>
-             <div class="col-md-6">
-               <img src="images/id2.jpg" alt="" style="margin-top: 60px; width:90%;" class="wow fadeInUp">
-           </div>
-            <div class="col-md-6">
-            <p style="color:#9a9a9a; padding-top: 50px;" class="wow bounceIn">12.02.2020</p>
-            <h1 class="wow bounceIn">7 Principles of Effective<br/>Icon Design</h1>
-            <p class="wow bounceIn" style="color:#9a9a9a; padding-top: 50px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, laudantium debitis maiores aut at quam, aliquid ad blanditiis officia minus quidem nam explicabo, nobis vitae itaque repellat! Eum, laborum, dolores!</p>
-            <a href="#" class="orange-bar wow bounceIn">Read more</a>
-           </div>
-           <div class="col-12"  style="text-align: center; margin-top: 50px;">
-                <a class="custom-btn wow bounceIn" href="">View all articles</a>
-           </div>
-       </div>
-   </section>
-   <!-------------------------contact-------------------------------->
-   <section class="container">
-       <div class="row">
-           <div class="col-12 wow bounceIn">
-               <h4 class="all-in-one-heading">Contact <span class="orange-bar"> ___</span></h4>
-               <h1>Work Enquiry</h1>
-               <h2 style="margin-top: 30px;">Wanna talk about your<br />next project?</h2>
-           </div>
-           
-           <div class="col-md-6">
-               <form action="">
-                   <div class="form-group">
-                       <label for="fullname"> Full Name</label>
-                       <input type="text" class="form-control" id="fullname" aria-describeby="textHelp" placeholder="Full name">
-                       
-                       <label for="email">Email Address</label>
-                       <input type="email" class="form-control" id="email" aria-describeby="emailHelp" placeholder="Email Address">
-                       
-                       
-                       <label for="projecttype">Project type</label>
-                       <select name="" id="projecttype" class="form-control custom-select">
-                           <option value="1">Select All And apply</option>
-                           <option value="2">Front end</option>
-                           <option value="3">Back end</option>
-                           <option value="4">App development</option>
-                       </select>
-                       
-                   </div>
-                  
-               </form>
-           </div>
-           <div class="col-md-6">
-               <div class="form-group">
-                   <label for="message">Quick Message</label>
-                   <textarea class="form-control" name="" id="message"  rows="5"></textarea>
-               </div>
-           </div>
-           <div class="col-12">
-                   <button class="btn-lg btn-dark btn" style="padding:10px 30px 10px 30px; border-radius: 25px;">Send</button>
-                   <p style="color:#9a9a9a; padding-top: 50px;">2020 &copy; MD ALI SHER ALI</p>
-           </div>
-       </div>
-   </section>
-   
-    <!--script-->
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="footer-copy">2025 &copy; Darlene Cox &mdash; All Rights Reserved</p>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
     <script src="jquery/jquery.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   
-    <script src="jquery/wow.js"></script>
-    <script src="jquery/wow.min.js"></script>
     <script src="owl-carousl/owl.carousel.min.js"></script>
     <script src="./custom-script.js"></script>
 </body>
