@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./owl-carousl/owl.carousel.min.css">
     <link rel="stylesheet" href="./owl-carousl/owl.theme.default.min.css">
     <link rel="stylesheet" href="./custome-style.css">
-    <title>Darlene Cox — Creative Designer</title>
+    <title>Dylan Carter — UI/UX Designer</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#about" class="nav-logo">
-                <img src="images/logo.png" alt="Logo">
+                <img src="images/logo.png" alt="Dylan Carter Logo">
             </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#about" class="nav-link active">About</a></li>
@@ -41,7 +41,6 @@
 
     <!-- ===== HERO ===== -->
     <section id="about" class="hero">
-        <!-- Glassmorphism background blobs -->
         <div class="hero-blob blob-1"></div>
         <div class="hero-blob blob-2"></div>
         <div class="hero-blob blob-3"></div>
@@ -50,10 +49,10 @@
             <div class="hero-left">
                 <span class="section-label hero-anim" style="animation-delay:0.1s">About <span class="label-line">___</span></span>
                 <h1 class="hero-name hero-anim" style="animation-delay:0.25s">
-                    Darlene<br>
-                    <span class="name-outline">Cox</span>
+                    Dylan<br>
+                    <span class="name-outline">Carter</span>
                 </h1>
-                <p class="hero-bio hero-anim" style="animation-delay:0.4s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum tempora, harum eius dignissimos? Voluptas vitae, inventore rerum beatae quae culpa non corrupti ad molestiae minima.</p>
+                <p class="hero-bio hero-anim" style="animation-delay:0.4s">I'm a UI/UX designer with 8+ years of experience crafting intuitive digital products. I help startups and established brands turn complex ideas into seamless, beautiful user experiences.</p>
                 <div class="hero-actions hero-anim" style="animation-delay:0.55s">
                     <a href="#contact" class="btn-primary">Work Enquiry</a>
                     <a href="#portfolio" class="btn-ghost">See My Work</a>
@@ -75,25 +74,35 @@
                     </div>
                 </div>
             </div>
+
             <div class="hero-right hero-anim-right" style="animation-delay:0.3s">
                 <div class="hero-image-wrap">
-                    <div id="about-slide" class="owl-carousel">
-                        <div class="item"><img src="./images/langin-page-img1.jpg" alt="Darlene Cox"></div>
-                        <div class="item"><img src="./images/langin-page-img2.jpg" alt="Darlene Cox"></div>
-                        <div class="item"><img src="./images/langin-page-img3.jpg" alt="Darlene Cox"></div>
-                    </div>
-                    <!-- Glassmorphism slide info panel -->
-                    <div class="slide-glass-panel">
-                        <div class="slide-counter-wrap">
-                            <span class="slide-num">01</span>
-                            <span class="slide-sep"> / </span>
-                            <span class="slide-total">03</span>
+                    <!-- slider-inner isolates overflow:hidden so nav arrows stay visible -->
+                    <div class="slider-inner">
+                        <div id="about-slide" class="owl-carousel">
+                            <div class="item"><img src="./images/langin-page-img1.jpg" alt="Dylan Carter"></div>
+                            <div class="item"><img src="./images/langin-page-img2.jpg" alt="Dylan Carter"></div>
+                            <div class="item"><img src="./images/langin-page-img3.jpg" alt="Dylan Carter"></div>
                         </div>
-                        <div class="slide-progress-bar">
-                            <div class="slide-progress-fill"></div>
+                        <div class="slide-glass-panel">
+                            <div class="slide-counter-wrap">
+                                <span class="slide-num">01</span>
+                                <span class="slide-sep"> / </span>
+                                <span class="slide-total">03</span>
+                            </div>
+                            <div class="slide-progress-bar">
+                                <div class="slide-progress-fill"></div>
+                            </div>
+                            <span class="slide-label">Portfolio</span>
                         </div>
-                        <span class="slide-label">Portfolio</span>
                     </div>
+                    <!-- Nav buttons live OUTSIDE slider-inner so overflow:hidden never clips them -->
+                    <button class="slider-nav-btn slider-prev" id="sliderPrev" aria-label="Previous slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-nav-btn slider-next" id="sliderNext" aria-label="Next slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                     <div class="img-accent-dot"></div>
                     <div class="img-accent-ring"></div>
                 </div>
@@ -106,6 +115,7 @@
                 </div>
             </div>
         </div>
+
         <div class="hero-scroll">
             <div class="scroll-mouse">
                 <div class="scroll-wheel"></div>
@@ -132,42 +142,42 @@
             </div>
             <div class="portfolio-grid">
                 <div class="pf-item pf-tall" data-animate data-delay="0">
-                    <img src="images/f1.jpg" alt="Portfolio 1">
+                    <img src="images/f1.jpg" alt="Fintech Mobile App">
                     <div class="pf-overlay">
                         <span class="pf-cat">UI Design</span>
-                        <h3>Project One</h3>
+                        <h3>Fintech Mobile App</h3>
                         <a href="#" class="pf-link">View <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="pf-item" data-animate data-delay="0.1">
-                    <img src="images/f2.jpg" alt="Portfolio 2">
+                    <img src="images/f2.jpg" alt="E-Commerce Redesign">
                     <div class="pf-overlay">
                         <span class="pf-cat">Web Design</span>
-                        <h3>Project Two</h3>
+                        <h3>E-Commerce Redesign</h3>
                         <a href="#" class="pf-link">View <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="pf-item" data-animate data-delay="0.2">
-                    <img src="images/f3.jpg" alt="Portfolio 3">
+                    <img src="images/f3.jpg" alt="Brand Identity System">
                     <div class="pf-overlay">
                         <span class="pf-cat">Branding</span>
-                        <h3>Project Three</h3>
+                        <h3>Brand Identity System</h3>
                         <a href="#" class="pf-link">View <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="pf-item" data-animate data-delay="0.1">
-                    <img src="images/f4.jpg" alt="Portfolio 4">
+                    <img src="images/f4.jpg" alt="SaaS Dashboard">
                     <div class="pf-overlay">
                         <span class="pf-cat">Graphic Design</span>
-                        <h3>Project Four</h3>
+                        <h3>SaaS Dashboard UI</h3>
                         <a href="#" class="pf-link">View <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="pf-item" data-animate data-delay="0.2">
-                    <img src="images/f5.jpg" alt="Portfolio 5">
+                    <img src="images/f5.jpg" alt="Travel App UI">
                     <div class="pf-overlay">
                         <span class="pf-cat">UI Design</span>
-                        <h3>Project Five</h3>
+                        <h3>Travel App UI</h3>
                         <a href="#" class="pf-link">View <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -185,25 +195,25 @@
             <div class="blog-grid">
                 <div class="blog-card" data-animate data-delay="0">
                     <div class="blog-img">
-                        <img src="images/id1.jpg" alt="Article 1">
+                        <img src="images/id1.jpg" alt="Psychology of Color in UI Design">
                         <span class="blog-badge">Design</span>
                     </div>
                     <div class="blog-body">
-                        <time class="blog-date">12 February 2020</time>
-                        <h3>7 Principles of Effective Icon Design</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, laudantium debitis maiores aut at quam, aliquid ad blanditiis officia.</p>
+                        <time class="blog-date">18 March 2024</time>
+                        <h3>The Psychology of Color in UI Design</h3>
+                        <p>Color is one of the most powerful tools in a designer's toolkit. Discover how the right palette drives user behavior, builds brand trust, and increases conversions across digital products.</p>
                         <a href="#" class="read-more">Read Article <i class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                 </div>
                 <div class="blog-card" data-animate data-delay="0.15">
                     <div class="blog-img">
-                        <img src="images/id2.jpg" alt="Article 2">
+                        <img src="images/id2.jpg" alt="Designing for Accessibility">
                         <span class="blog-badge">UX</span>
                     </div>
                     <div class="blog-body">
-                        <time class="blog-date">12 February 2020</time>
-                        <h3>7 Principles of Effective Icon Design</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, laudantium debitis maiores aut at quam, aliquid ad blanditiis officia.</p>
+                        <time class="blog-date">02 January 2024</time>
+                        <h3>Designing for Accessibility: A Practical Guide</h3>
+                        <p>Accessible design isn't just about compliance — it's about reaching every user. Explore practical WCAG 2.1 techniques, contrast ratios, and focus management patterns you can apply today.</p>
                         <a href="#" class="read-more">Read Article <i class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                 </div>
@@ -221,19 +231,19 @@
                 <div class="contact-info-col">
                     <span class="section-label light">Contact <span class="label-line">___</span></span>
                     <h2 class="section-title light">Work Enquiry</h2>
-                    <p class="contact-tagline">Wanna talk about your<br>next project?</p>
+                    <p class="contact-tagline">Got a project in mind?<br>Let's build it together.</p>
                     <div class="contact-details">
                         <div class="detail-row">
                             <div class="detail-icon"><i class="fas fa-envelope"></i></div>
-                            <span>hello@darlenecox.com</span>
+                            <span>hello@dylancarter.design</span>
                         </div>
                         <div class="detail-row">
                             <div class="detail-icon"><i class="fas fa-phone-alt"></i></div>
-                            <span>+1 (234) 567 890</span>
+                            <span>+1 (415) 882 3190</span>
                         </div>
                         <div class="detail-row">
                             <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <span>New York, USA</span>
+                            <span>San Francisco, CA, USA</span>
                         </div>
                     </div>
                 </div>
@@ -261,7 +271,7 @@
                         </div>
                         <div class="input-group">
                             <label>Message</label>
-                            <textarea placeholder="Tell me about your project..." rows="5"></textarea>
+                            <textarea placeholder="Tell me about your project, timeline, and budget..." rows="5"></textarea>
                         </div>
                         <button type="submit" class="btn-submit">
                             Send Message <i class="fas fa-paper-plane"></i>
@@ -275,12 +285,12 @@
     <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
         <div class="footer-container">
-            <p class="footer-copy">2025 &copy; Darlene Cox &mdash; All Rights Reserved</p>
+            <p class="footer-copy">2025 &copy; Dylan Carter &mdash; All Rights Reserved</p>
             <div class="footer-socials">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>

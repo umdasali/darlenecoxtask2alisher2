@@ -337,27 +337,36 @@ p { padding: 0; margin: 0; }
 }
 
 /* ============================================
-   HERO — SLIDER (image wrap + owl overrides)
+   HERO — SLIDER
 ============================================ */
+
+/* Outer wrap: positions the custom nav + decorations.
+   No overflow:hidden here so nav arrows are never clipped. */
 .hero-image-wrap {
     flex: 1;
-    min-width: 0; /* allow flex child to shrink below content size */
-    max-width: 100%; /* never exceed parent */
+    min-width: 0;
+    max-width: 100%;
+    position: relative;
+}
+
+/* Inner clip: applies the rounded corners + overflow clip to images only */
+.slider-inner {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
+    width: 100%;
     box-shadow:
         0 32px 80px rgba(0, 0, 0, 0.14),
         0 0 0 1px rgba(255, 255, 255, 0.6) inset;
 }
 
-/* Slider — constrain carousel to its container */
+/* Owl carousel constrained to its container */
 .hero-image-wrap .owl-carousel {
     width: 100%;
     max-width: 100%;
 }
 
-/* Slider images */
+/* Slider images — fluid height */
 .hero-image-wrap .owl-carousel .item img {
     width: 100%;
     max-width: 100%;
@@ -366,51 +375,45 @@ p { padding: 0; margin: 0; }
     display: block;
 }
 
-/* --- Custom OWL Nav (glassmorphism arrows) --- */
-.hero-image-wrap .owl-nav {
+/* Hide owl's built-in nav (we use custom buttons) */
+.hero-image-wrap .owl-nav  { display: none !important; }
+.hero-image-wrap .owl-dots { display: none !important; }
+
+/* ============================================
+   CUSTOM SLIDER NAV BUTTONS
+   Positioned on .hero-image-wrap (outside slider-inner)
+   so overflow:hidden never clips them.
+============================================ */
+.slider-nav-btn {
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    display: flex !important;
-    justify-content: space-between;
-    padding: 0 18px;
-    pointer-events: none;
-    margin: 0;
+    transform: translateY(-60%); /* -60% lifts it above the glass panel */
+    z-index: 20;
+    width: 46px;
+    height: 46px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
-.hero-image-wrap .owl-prev,
-.hero-image-wrap .owl-next {
-    pointer-events: all;
-    width: 46px !important;
-    height: 46px !important;
-    background: rgba(255, 255, 255, 0.18) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.4) !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    color: #ffffff !important;
-    font-size: 0.85rem !important;
-    transition: all 0.3s ease !important;
-    margin: 0 !important;
-    line-height: 1 !important;
+.slider-nav-btn:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    transform: translateY(-60%) scale(1.1);
+    box-shadow: 0 8px 24px rgba(255, 124, 56, 0.45);
 }
-.hero-image-wrap .owl-prev:hover,
-.hero-image-wrap .owl-next:hover {
-    background: var(--orange) !important;
-    border-color: var(--orange) !important;
-    transform: scale(1.1) !important;
-    box-shadow: 0 8px 24px rgba(255, 124, 56, 0.45) !important;
-}
-/* hide default owl arrow text, keep FA icon */
-.hero-image-wrap .owl-prev span,
-.hero-image-wrap .owl-next span { display: none !important; }
-
-/* --- Dots: hide (we use the glass panel instead) --- */
-.hero-image-wrap .owl-dots { display: none !important; }
+.slider-prev { left: 16px; }
+.slider-next { right: 16px; }
 
 /* ============================================
    HERO — GLASS SLIDE PANEL
@@ -988,15 +991,14 @@ p { padding: 0; margin: 0; }
         height: clamp(300px, 60vw, 480px);
     }
 
-    /* Smaller nav arrows */
-    .hero-image-wrap .owl-prev,
-    .hero-image-wrap .owl-next {
-        width: 38px !important;
-        height: 38px !important;
-        font-size: 0.75rem !important;
+    /* Scale down custom nav on tablet */
+    .slider-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.78rem;
     }
 
-    /* Slide-in animation becomes fade-up on tablet to avoid h-scroll */
+    /* Slide-in animation stays fade-up on tablet to avoid h-scroll */
     .hero-anim-right {
         animation-name: heroFadeUp !important;
     }
@@ -1083,12 +1085,17 @@ p { padding: 0; margin: 0; }
     .hero-image-wrap .owl-carousel .item img {
         height: clamp(260px, 80vw, 360px);
     }
-    .hero-image-wrap .owl-prev,
-    .hero-image-wrap .owl-next {
-        width: 34px !important;
-        height: 34px !important;
-        font-size: 0.7rem !important;
+    .slider-nav-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.7rem;
+        transform: translateY(-55%);
     }
+    .slider-nav-btn:hover {
+        transform: translateY(-55%) scale(1.1);
+    }
+    .slider-prev { left: 12px; }
+    .slider-next { right: 12px; }
     .slide-label { display: none; }
     .slide-glass-panel { padding: 10px 14px; gap: 10px; bottom: 14px; left: 14px; right: 14px; }
     .slide-num { font-size: 1.1rem; }

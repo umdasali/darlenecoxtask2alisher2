@@ -12,11 +12,15 @@ $slider.owlCarousel({
     smartSpeed: 700,
     loop: true,
     dots: false,
-    nav: true,
-    navText: [
-        '<i class="fas fa-chevron-left"></i>',
-        '<i class="fas fa-chevron-right"></i>'
-    ]
+    nav: false       /* custom buttons used instead */
+});
+
+/* Wire custom nav buttons — these sit outside overflow:hidden so always tappable */
+$('#sliderPrev').on('click', function () {
+    $slider.trigger('prev.owl.carousel');
+});
+$('#sliderNext').on('click', function () {
+    $slider.trigger('next.owl.carousel');
 });
 
 /* Update glass panel counter + progress bar on each slide change */
